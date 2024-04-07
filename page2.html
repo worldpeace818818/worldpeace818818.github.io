@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <style>
+    #content {
+      text-align: center;
+    }
+    #image-container {
+      display: flex; /* Use flexbox for layout */
+      justify-content: center; /* Center the images horizontally */
+      margin-top: 20px;
+    }
+    .image-wrapper {
+      flex: 0 0 50%; /* Each image wrapper takes up 50% of the container width */
+    }
+    .image-wrapper img {
+      width: 100%; /* Make the images fill their respective image wrappers */
+    }
+  </style>
+  <style>
+    body {
+      background-color: black; /* Change background color to black */
+      color: white; /* Change text color to white */
+      font-family: Arial, sans-serif; /* Specify font */
+      padding: 20px; /* Add some padding for better readability */
+    }
+
+    canvas {
+      display: block; /* Ensure the canvas is displayed as a block element */
+      margin: 0 auto; /* Center the canvas horizontally */
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <!-- Button to redirect to index.html -->
+    <button id="redirect-button">Go to Home</button>
+    <p>Take the stairs or the elevator.</p>
+    <div id="image-container">
+      <div class="image-wrapper">
+        <img src="2311260401_114b67a696_o.jpg" id="hallway-image1"/>
+      </div>
+      <div class="image-wrapper">
+        <img src="50062555751_9ee87ed94a_c.jpg" id="hallway-image2"/>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("hallway-image1").addEventListener("click", function() {
+      window.location.href = "page3_elevator.html";
+    });
+
+    document.getElementById("hallway-image2").addEventListener("click", function() {
+      window.location.href = "page3_stairs.html";
+    });
+
+    // Add event listener to the button
+    document.getElementById("redirect-button").addEventListener("click", function() {
+      // Redirect to index.html
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

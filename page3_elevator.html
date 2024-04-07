@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <style>
+    #content {
+      text-align: center;
+    }
+    #image-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+  <style>
+    body {
+      background-color: black; /* Change background color to black */
+      color: white; /* Change text color to white */
+      font-family: Arial, sans-serif; /* Specify font */
+      padding: 20px; /* Add some padding for better readability */
+    }
+
+    canvas {
+      display: block; /* Ensure the canvas is displayed as a block element */
+      margin: 0 auto; /* Center the canvas horizontally */
+    }
+  </style>
+</head>
+<body>
+  </div>
+
+    <!-- Button to redirect to index.html -->
+    <button id="redirect-button">Go to Home</button>
+  </div>
+  <div id="content">
+      <p>There's some strange guests at the hotel !!!</p>
+    <div id="image-container">
+      <img src="5927551004_d1590e3af5_k.jpg" width="800px" id="hallway-image"/>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("hallway-image").addEventListener("click", function() {
+      window.location.href = "page4_elevator.html";
+    });
+     // Add event listener to the button
+    document.getElementById("redirect-button").addEventListener("click", function() {
+      // Redirect to index.html
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

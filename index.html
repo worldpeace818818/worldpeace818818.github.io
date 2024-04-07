@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      background-color: black; /* Change background color to black */
+      color: white; /* Change text color to white */
+      font-family: Arial, sans-serif; /* Specify font */
+      padding: 20px; /* Add some padding for better readability */
+    }
+
+    canvas {
+      display: block; /* Ensure the canvas is displayed as a block element */
+      margin: 0 auto; /* Center the canvas horizontally */
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let img;
+
+    function preload() {
+      // Load the image
+      img = loadImage('5059957124_f238b19298_k.jpg');
+    }
+
+    function setup() {
+      createCanvas(800, 600);
+      background(255);
+      textSize(32);
+      fill(0);
+      textAlign(CENTER);
+      text('get to the beach !!!', width / 2, 50);
+      textSize(16);
+      text('you have to find your way to the beach', width / 2, 100);
+    }
+
+    function draw() {
+      if (img) {
+        // Once the image is loaded, display it below the text
+        image(img, 0, 150, width, height);
+      }
+    }
+
+    function mouseClicked() {
+      window.location.href = 'page2.html';
+    }
+  </script>
+</body>
+</html>
